@@ -1,0 +1,83 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a [routerLink]="'/dashboard'" class="navbar-brand">Tasks</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a [routerLink]="'/addTask'" class="nav-link">AddTask</a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="'/products'" class="nav-link">Tasks</a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="'/products'" class="nav-link">MinotorTasks</a>
+            </li>
+        </ul>
+    </div>
+  </nav>
+
+  <hr>
+
+<div class="container">
+    <form class="col-md-6" #tasksForm="ngForm" (ngSubmit)="addTasks()">
+        <div class="form-group">
+            <label> Task </label>
+            <input  class="form-control" type="text" name="text" ngModel/>
+        </div>
+
+        <div class="form-group">
+            <label> Site </label>
+            <select  class="form-control" name="site" ngModel>
+                <option value=1></option>
+                <option value=2>SLG</option>
+                <option value=3>DEW</option>
+                <option value=4>LNZ</option>
+                <option value=5>SAF</option>
+                <option value=6>MAU</option>
+                <option value=7>LTG</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label> Resource </label>
+            <select  class="form-control" name="resource" ngModel>
+                <option value=1></option>
+                <option value=2>resource 1</option>
+                <option value=3>resource 2</option>
+                <option value=4>resource 3</option>
+            </select>
+        </div>
+
+
+        <div class="form-group">
+            <label> Status </label>
+            <select  class="form-control" name="status" ngModel>
+                <option value=1>Created</option>
+                <option value=2>Assigned</option>
+                <option value=3>resource 3</option>
+                <option value=4>resource 4</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label> Hours </label>
+            <input type="select" class="form-control" name="hours" ngModel>
+        </div>
+
+        <div class="form-group">
+            <label> Start Date </label>
+            <input type="date" class="form-control" name="startDate" ngModel>
+        </div>
+
+        <div class="form-group">
+            <label> End Date </label>
+            <input type="date" class="form-control" name="endDate" ngModel>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary form-control">Submit</button>
+        </div>
+    </form>
+    </div>
